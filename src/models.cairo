@@ -29,6 +29,18 @@ struct Moves {
     last_direction: Direction
 }
 
+
+struct Map {
+    width: u32,
+    height: u32,
+    #[key]
+    player: ContractAddress,
+    #[key]
+    position: Vec2,
+    #[key]
+    moves: Moves,
+}
+
 #[derive(Copy, Drop, Serde, Introspect)]
 struct Vec2 {
     x: u32,
